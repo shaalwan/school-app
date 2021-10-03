@@ -56,8 +56,8 @@ class Userlistview(viewsets.ReadOnlyModelViewSet):
   model = User
   serializer = UserSerializer
   filter_backends = (DjangoFilterBackend, filters.SearchFilter,)
-  filterset_fields = ['standard', 'user__name']
-  search_fields = ('user__name','name','roll_number','registeration_id')
+  filterset_fields = ['standard', 'username']
+  search_fields = ('username','name','roll_number','registeration_id')
   
   def get_queryset(self):
         users = User.objects.all()
