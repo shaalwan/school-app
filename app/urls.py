@@ -7,5 +7,5 @@ urlpatterns = [
   path('admin',registerAdmin.as_view(),name='signupAdmin'),
   path('login',login.as_view(),name='Login'),
   path('userlist',Userlistview.as_view({'get':'list'}),name='userlist'),
-  path('user/pk',userview.as_view(),name='user')
+  path('user/<string:pk>',userview.as_view(),name='user')
 ]
