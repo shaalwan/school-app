@@ -54,7 +54,7 @@ class login(APIView):
 
 class Userlistview(viewsets.ReadOnlyModelViewSet):
   model = User
-  serializer = UserSerializer
+  serializer_class = UserSerializer
   filter_backends = (DjangoFilterBackend, filters.SearchFilter,)
   filterset_fields = ['standard', 'username']
   search_fields = ('username','name','roll_number','registeration_id')
