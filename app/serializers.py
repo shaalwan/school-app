@@ -9,9 +9,9 @@ class UserSerializer(serializers.ModelSerializer):
   registeration_id = serializers.CharField(max_length=100)
   class Meta:
     model = User
-    fields = ['username','password','name','standard','roll_number','father_name','registeration_id']
+    fields = ['username','password','name','standard','roll_number','father_name','registeration_id','is_staff']
 
 class addUserSerializer(serializers.ModelSerializer):
   class Meta:
     model = User
-    fields = ['username','password','name','standard','roll_number','father_name','pk']
+    fields = ['username','password','name','standard','roll_number','father_name','pk','is_staff']
