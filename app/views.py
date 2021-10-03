@@ -60,7 +60,7 @@ class Userlistview(viewsets.ReadOnlyModelViewSet):
   search_fields = ('username','name','roll_number','registeration_id')
   
   def get_queryset(self):
-        users = User.objects.all()
+        users = User.objects.all().order_by('roll_number')
         return users
 
 class userview(APIView):
